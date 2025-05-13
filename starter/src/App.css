@@ -1,0 +1,11 @@
+.App {
+  text-align: start;
+}
+
+li {
+  list-style: none;
+}
+
+.restaurant {
+  border: solid;
+}
