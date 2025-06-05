@@ -30,4 +30,24 @@ export default [
       ],
     },
   },
+
+  // Cypress config (to get rid of red squiggles)
+  {
+    files: ['cypress/**/*.cy.{js,jsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.mocha,
+        ...globals.node,
+        cy: true,
+        Cypress: true,
+      },
+    },
+    plugins: {
+      cypress: cypressPlugin,
+    },
+    rules: {
+      ...cypressPlugin.configs.recommended.rules,
+    },
+  },
 ]
